@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anbu Deepan Chakravarthy V — Finance & Accounts Professional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #0a1330;
+    --bg-raised: #101c40;
+    --card: #13204a;
+    --gold: #d4af5a;
+    --gold-bright: #f0d38a;
+    --gold-soft: #8f7638;
+    --wine: #6b1620;
+    --ivory: #f1e9d8;
+    --ivory-dim: #b7bfd6;
+    --hair: #263566;
+    --max: 920px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+
+  body{
+    margin:0;
+    position: relative;
+    background:
+      radial-gradient(1100px 620px at 12% -8%, rgba(212,175,90,0.12), transparent 58%),
+      radial-gradient(900px 560px at 105% 4%, rgba(70,90,180,0.28), transparent 55%),
+      radial-gradient(1400px 900px at 50% 110%, rgba(212,175,90,0.06), transparent 60%),
+      linear-gradient(180deg, #060a1c 0%, var(--bg) 45%, #0d1638 100%);
+    color: var(--ivory);
+    font-family: 'Manrope', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* film-grain / velvet texture overlay */
+  body::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0.05;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  /* soft vignette */
+  body::after{
+    content:"";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    box-shadow: inset 0 0 220px 60px rgba(6,10,28,0.65);
+  }
+
+  /* rocket line-art background layer */
+  .rocket-field{
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  .rocket-field svg{
+    position: absolute;
+    opacity: 0.16;
+    stroke: var(--gold);
+    fill: none;
+  }
+  .rocket-field .r1{ top: -4%; right: -3%; width: 340px; transform: rotate(18deg); opacity: 0.14; }
+  .rocket-field .r2{ bottom: -8%; left: -6%; width: 420px; transform: rotate(-8deg); opacity: 0.22; }
+  .rocket-field .r3{ top: 38%; right: 4%; width: 150px; transform: rotate(24deg); opacity: 0.09; }
+  .rocket-field .j1{ top: 6%; left: 50%; width: 480px; transform: translateX(-50%) rotate(-6deg); opacity: 0.10; }
+  .rocket-field .j2{ top: 58%; left: 8%; width: 400px; transform: rotate(10deg); opacity: 0.09; }
+  .rocket-field .star{ fill: var(--gold); stroke: none; }
+
+  .wrap{ position: relative; z-index: 3; }
+
+  ::selection{ background: var(--gold); color: #0c0b0a; }
+
+  a{ color: var(--gold); text-decoration: none; }
+  a:hover{ color: var(--ivory); }
+  a:focus-visible, button:focus-visible{ outline: 2px solid var(--gold); outline-offset: 3px; }
+
+  .wrap{
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  h1,h2,h3{
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    margin: 0;
+    letter-spacing: 0.01em;
+  }
+
+  /* ---------- Masthead ---------- */
+  header.masthead{
+    padding: 72px 0 46px;
+    border-bottom: 1px solid var(--hair);
+  }
+  .masthead-top{
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  .masthead-kicker{
+    font-size: 0.78rem;
+    color: var(--ivory-dim);
+    letter-spacing: 0.14em;
+  }
+  .masthead-kicker span{ color: var(--gold); }
+
+  .name{
+    font-size: clamp(2.6rem, 7vw, 4.6rem);
+    line-height: 1.02;
+    margin-top: 18px;
+    color: var(--ivory);
+  }
+  .name em{
+    font-style: italic;
+    background: linear-gradient(115deg, var(--gold-soft) 10%, var(--gold-bright) 45%, var(--gold) 65%, var(--gold-soft) 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 0 42px rgba(212,175,90,0.25);
+  }
+
+  .flourish{
+    display:flex;
+    align-items:center;
+    gap: 10px;
+    margin-top: 22px;
+    color: var(--gold-soft);
+  }
+  .flourish .line{
+    flex: 1;
+    max-width: 60px;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold-soft), transparent);
+  }
+  .flourish .line.reverse{ background: linear-gradient(270deg, var(--gold-soft), transparent); }
+  .flourish svg{ width: 14px; height: 14px; flex-shrink: 0; }
+
+  .role-line{
+    margin-top: 14px;
+    font-size: 1.15rem;
+    color: var(--ivory-dim);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    max-width: 620px;
+  }
+
+  .aim{
+    margin-top: 22px;
+    max-width: 640px;
+    font-size: 1rem;
+    color: var(--ivory-dim);
+    border-left: 2px solid var(--gold);
+    padding-left: 18px;
+  }
+
+  .contact-row{
+    margin-top: 30px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px 28px;
+    font-size: 0.92rem;
+  }
+  .contact-row a{ color: var(--ivory); border-bottom: 1px solid var(--hair); padding-bottom: 2px; }
+  .contact-row a:hover{ color: var(--gold); border-color: var(--gold); }
+
+  /* ---------- Section shell ---------- */
+  section{ padding: 56px 0; border-bottom: 1px solid var(--hair); }
+  section:last-of-type{ border-bottom: none; }
+
+  .section-head{
+    display:flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 34px;
+  }
+  .section-num{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    background: linear-gradient(115deg, var(--gold-soft), var(--gold-bright));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 1.1rem;
+  }
+  .section-head h2{
+    font-size: 1.9rem;
+    color: var(--ivory);
+  }
+  .section-rule{
+    flex:1;
+    height:1px;
+    background: var(--hair);
+  }
+
+  /* ---------- Experience ---------- */
+  .job{
+    display:grid;
+    grid-template-columns: 190px 1fr;
+    gap: 22px;
+    padding: 26px 0;
+    border-top: 1px solid var(--hair);
+  }
+  .job:first-of-type{ border-top: none; padding-top: 0; }
+
+  .job-period{
+    font-size: 0.85rem;
+    color: var(--gold-soft);
+    font-family: 'Manrope', sans-serif;
+    letter-spacing: 0.02em;
+  }
+  .job-period .duration{
+    display:block;
+    color: var(--ivory-dim);
+    margin-top: 4px;
+    font-size: 0.8rem;
+  }
+
+  .job-title{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--ivory);
+    margin-bottom: 2px;
+  }
+  .job-org{
+    color: var(--ivory-dim);
+    font-size: 0.92rem;
+    margin-bottom: 12px;
+  }
+  .job-org .place{ color: var(--gold); }
+
+  details.job-detail summary{
+    cursor: pointer;
+    color: var(--gold-soft);
+    font-size: 0.85rem;
+    list-style: none;
+    display:flex;
+    align-items:center;
+    gap:8px;
+  }
+  details.job-detail summary::-webkit-details-marker{ display:none; }
+  details.job-detail summary::before{
+    content: "+";
+    display:inline-block;
+    width: 16px; height:16px;
+    border: 1px solid var(--gold-soft);
+    border-radius: 50%;
+    text-align:center;
+    line-height:14px;
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+  }
+  details.job-detail[open] summary::before{ content: "–"; }
+  details.job-detail:hover summary{ color: var(--gold); }
+
+  .job-tasks{
+    margin: 14px 0 0;
+    padding-left: 18px;
+    color: var(--ivory-dim);
+    font-size: 0.94rem;
+  }
+  .job-tasks li{ margin-bottom: 6px; }
+
+  /* ---------- Two-col grids: education / skills ---------- */
+  .grid-2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+  }
+
+  .edu-item{ margin-bottom: 20px; }
+  .edu-item:last-child{ margin-bottom: 0; }
+  .edu-degree{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    color: var(--ivory);
+  }
+  .edu-meta{
+    font-size: 0.86rem;
+    color: var(--ivory-dim);
+    margin-top: 2px;
+  }
+  .edu-meta .gold{ color: var(--gold); }
+
+  .taglist{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .tag{
+    border: 1px solid var(--hair);
+    color: var(--ivory-dim);
+    padding: 7px 14px;
+    border-radius: 2px;
+    font-size: 0.85rem;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .tag:hover{ border-color: var(--gold-soft); color: var(--gold); }
+
+  .cert-list, .interest-list{
+    list-style: none;
+    margin:0; padding:0;
+  }
+  .cert-list li, .interest-list li{
+    padding: 12px 0;
+    border-top: 1px solid var(--hair);
+    font-size: 0.94rem;
+    color: var(--ivory-dim);
+  }
+  .cert-list li:first-child, .interest-list li:first-child{ border-top: none; padding-top: 0; }
+  .cert-list strong, .interest-list strong{ color: var(--ivory); font-weight: 600; }
+  .cert-list .from{ color: var(--gold-soft); }
+
+  /* ---------- Achievements ---------- */
+  .accolades{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .accolade{
+    padding: 28px 24px;
+    background: linear-gradient(160deg, var(--card), #120f0d);
+    border: 1px solid var(--hair);
+    position: relative;
+    box-shadow: 0 18px 40px -22px rgba(0,0,0,0.8);
+    transition: border-color 0.25s ease;
+  }
+  .accolade:hover{ border-color: var(--gold-soft); }
+  .accolade::before{
+    content: "";
+    position:absolute;
+    top:0; left:0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+  .accolade .year{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 1.6rem;
+  }
+  .accolade p{
+    margin: 10px 0 0;
+    font-size: 0.92rem;
+    color: var(--ivory-dim);
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    padding: 50px 0 60px;
+    text-align:center;
+  }
+  footer .name-echo{
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--gold);
+  }
+  footer p{
+    color: var(--ivory-dim);
+    font-size: 0.85rem;
+    margin-top: 8px;
+  }
+
+  @media (max-width: 720px){
+    .job{ grid-template-columns: 1fr; gap: 6px; }
+    .grid-2{ grid-template-columns: 1fr; gap: 34px; }
+    .accolades{ grid-template-columns: 1fr; }
+    header.masthead{ padding: 52px 0 34px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior:auto; }
+    *{ transition: none !important; }
+  }
+</style>
+</head>
+<body>
+
+<div class="rocket-field" aria-hidden="true">
+  <!-- Falcon-style rocket: slender body, grid fins, landing legs, exhaust plume -->
+  <svg class="r1" viewBox="0 0 120 320" xmlns="http://www.w3.org/2000/svg" stroke-width="1.4">
+    <path d="M50 20 Q60 4 70 20 L70 230 L50 230 Z"/>
+    <line x1="50" y1="60" x2="70" y2="60"/>
+    <path d="M50 70 L34 92 L34 106 L50 96 Z"/>
+    <path d="M70 70 L86 92 L86 106 L70 96 Z"/>
+    <path d="M50 230 L40 264 L46 264 L54 234 Z"/>
+    <path d="M70 230 L80 264 L74 264 L66 234 Z"/>
+    <path d="M56 230 L52 268 L58 268 L60 232 Z"/>
+    <path d="M60 236 Q48 264 52 292 Q60 300 68 292 Q72 264 60 236 Z" stroke-width="1"/>
+    <circle class="star" cx="20" cy="30" r="1.4"/>
+    <circle class="star" cx="98" cy="60" r="1"/>
+    <circle class="star" cx="14" cy="140" r="1.2"/>
+    <circle class="star" cx="104" cy="200" r="1"/>
+  </svg>
+
+  <!-- GSLV Mk III-style rocket: twin solid boosters, core stage, fairing -->
+  <svg class="r2" viewBox="0 0 160 340" xmlns="http://www.w3.org/2000/svg" stroke-width="1.3">
+    <!-- core stage + fairing -->
+    <path d="M68 14 Q80 0 92 14 L92 260 L68 260 Z"/>
+    <line x1="68" y1="80" x2="92" y2="80"/>
+    <line x1="68" y1="230" x2="92" y2="230"/>
+    <!-- twin strap-on solid boosters -->
+    <path d="M40 66 Q34 60 34 74 L34 236 Q34 246 40 250 L50 250 L50 66 Z"/>
+    <path d="M110 66 Q116 60 116 74 L116 236 Q116 246 110 250 L100 250 L100 66 Z"/>
+    <line x1="34" y1="150" x2="50" y2="150" stroke-width="1"/>
+    <line x1="116" y1="150" x2="100" y2="150" stroke-width="1"/>
+    <!-- fins / tail -->
+    <path d="M68 260 L54 292 L64 292 L72 264 Z"/>
+    <path d="M92 260 L106 292 L96 292 L88 264 Z"/>
+    <path d="M40 250 L28 276 L38 276 L48 252 Z"/>
+    <path d="M110 250 L122 276 L112 276 L102 252 Z"/>
+    <!-- exhaust plume -->
+    <path d="M72 266 Q60 292 66 320 Q80 330 90 320 Q96 292 84 266 Z" stroke-width="1"/>
+    <circle class="star" cx="16" cy="24" r="1.2"/>
+    <circle class="star" cx="140" cy="50" r="1.4"/>
+    <circle class="star" cx="12" cy="190" r="1"/>
+    <circle class="star" cx="146" cy="230" r="1"/>
+  </svg>
+
+  <!-- small distant rocket, simple silhouette with trail -->
+  <svg class="r3" viewBox="0 0 80 220" xmlns="http://www.w3.org/2000/svg" stroke-width="1.6">
+    <path d="M40 10 Q48 0 56 10 L56 150 L40 150 Z"/>
+    <path d="M40 150 L30 178 L38 178 L44 154 Z"/>
+    <path d="M56 150 L66 178 L58 178 L52 154 Z"/>
+    <path d="M44 154 Q36 176 40 200 Q48 208 52 200 Q56 176 52 154 Z" stroke-width="1"/>
+  </svg>
+
+  <!-- Tejas Mk1: single-engine delta-wing fighter, top view -->
+  <svg class="j1" viewBox="0 0 400 220" xmlns="http://www.w3.org/2000/svg" stroke-width="1.1">
+    <path d="M20 108 Q60 100 140 106 L230 106 Q240 100 250 106 L370 108 L372 112 L250 112 L200 116 L372 116 L370 120 L250 118 L140 114 Q60 120 20 112 Z"/>
+    <path d="M150 108 L120 40 L108 40 L142 110 Z"/>
+    <path d="M150 112 L120 180 L108 180 L142 110 Z"/>
+    <path d="M280 106 L330 78 L330 88 L288 108 Z"/>
+    <path d="M280 114 L330 132 L330 122 L288 112 Z"/>
+    <path d="M355 90 L372 70 L376 70 L364 108 Z"/>
+    <circle class="star" cx="60" cy="30" r="1"/>
+    <circle class="star" cx="380" cy="160" r="1.2"/>
+  </svg>
+
+  <!-- Su-30MKI: twin-engine, twin-tail heavy fighter with canards, top view -->
+  <svg class="j2" viewBox="0 0 460 240" xmlns="http://www.w3.org/2000/svg" stroke-width="1.1">
+    <path d="M20 120 Q80 112 170 118 L260 118 Q272 112 284 118 L420 120 L422 124 L284 122 L220 128 L422 130 L420 134 L284 132 L170 126 Q80 132 20 124 Z"/>
+    <path d="M100 116 L70 92 L62 94 L94 120 Z"/>
+    <path d="M100 124 L70 150 L62 148 L94 122 Z"/>
+    <path d="M170 118 L110 30 L96 32 L156 120 Z"/>
+    <path d="M170 124 L110 210 L96 208 L156 122 Z"/>
+    <path d="M300 116 L360 80 L362 92 L312 120 Z"/>
+    <path d="M300 126 L360 162 L362 150 L312 122 Z"/>
+    <path d="M392 96 L412 74 L416 76 L400 120 Z"/>
+    <path d="M392 146 L412 168 L416 166 L400 122 Z"/>
+    <circle class="star" cx="40" cy="180" r="1.3"/>
+    <circle class="star" cx="440" cy="60" r="1"/>
+  </svg>
+</div>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="masthead-top">
+      <div class="masthead-kicker">FINANCE &amp; ACCOUNTS · <span>10 YEARS EXPERIENCE</span></div>
+    </div>
+    <h1 class="name">Anbu Deepan<br><em>Chakravarthy V</em></h1>
+    <div class="flourish">
+      <span class="line"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/></svg>
+      <span class="line reverse"></span>
+    </div>
+    <p class="role-line">Accounts Receivable · GST &amp; Statutory Compliance · Financial Reporting</p>
+    <p class="aim">"To achieve the best performance result in professional work and synergies with growth." Ten years across accounting and finance, including six years running an independent construction venture.</p>
+    <div class="contact-row">
+      <a href="tel:+918825829557">+91 88258 29557</a>
+      <a href="mailto:adc2020acs@gmail.com">adc2020acs@gmail.com</a>
+      <span style="color:var(--ivory-dim)">Coimbatore, Tamil Nadu, India</span>
+    </div>
+  </header>
+
+  <!-- WORK EXPERIENCE -->
+  <section id="experience">
+    <div class="section-head">
+      <span class="section-num">I.</span>
+      <h2>Work Experience</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <div class="job">
+      <div class="job-period">Apr 2025 — Present<span class="duration">Current role</span></div>
+      <div>
+        <div class="job-title">Accountant</div>
+        <div class="job-org">Steller Distributing Agency · <span class="place">Irugur, Coimbatore</span></div>
+        <details class="job-detail">
+          <summary>View responsibilities</summary>
+          <ul class="job-tasks">
+            <li>Manage day-to-day accounting activities</li>
+            <li>Handle accounts payable and receivable</li>
+            <li>Prepare financial statements and reports</li>
+            <li>Maintain accurate records of transactions</li>
+            <li>Ensure compliance with company policies and statutory requirements</li>
+            <li>Reconcile bank statements and accounts</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-period">Apr 2024 — Mar 2025<span class="duration">12 months</span></div>
+      <div>
+        <div class="job-title">Accounts In-charge</div>
+        <div class="job-org">Carbonmax Advantech Pvt. Ltd. · <span class="place">Dharapuram, Tamil Nadu</span> — Activated Carbon Manufacturing</div>
+        <details class="job-detail">
+          <summary>View responsibilities</summary>
+          <ul class="job-tasks">
+            <li>Customer master verification and update; vendor invoice verification</li>
+            <li>Payment processing for vendors and staff salaries; petty cash handling</li>
+            <li>Staff attendance, PF and ESI verification, employee enrollment</li>
+            <li>GRN report preparation; sales invoice billing, e-way bill and delivery challan</li>
+            <li>Trade payables and receivables statements with follow-up</li>
+            <li>Assisted in GST and tax filing</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-period">Feb 2021 — May 2023<span class="duration">28 months</span></div>
+      <div>
+        <div class="job-title">AR Accountant (Accounts Receivable)</div>
+        <div class="job-org">Leggett &amp; Platt Automotive India Pvt. Ltd. · <span class="place">Chennai, Tamil Nadu</span> — Automotive Manufacturing</div>
+        <details class="job-detail">
+          <summary>View responsibilities</summary>
+          <ul class="job-tasks">
+            <li>Billing, AR collection and reporting to deadlines via Tally Prime</li>
+            <li>AR reconciliations for third-party and inter-company accounts</li>
+            <li>Sales actuals vs. forecast, variance and credit limit analysis</li>
+            <li>Age analysis and DSO reporting for KPI tracking</li>
+            <li>Coordinated with Corporate Credit and Sales Analysis teams on collections</li>
+            <li>Assisted with month-end close, stock audit, and HFM corporate reporting</li>
+            <li>Liaised with internal and statutory auditors on AR matters</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-period">Nov 2018 — Apr 2020<span class="duration">18 months</span></div>
+      <div>
+        <div class="job-title">Sr. Executive — Accounts</div>
+        <div class="job-org">CADD Centre Training Services Pvt. Ltd. · <span class="place">Chennai, Tamil Nadu</span> — CADD Software Training Institute</div>
+        <details class="job-detail">
+          <summary>View responsibilities</summary>
+          <ul class="job-tasks">
+            <li>Expense, contra, payment, receipt and journal voucher entries in Tally</li>
+            <li>Reviewed employee travel and conveyance claims against policy</li>
+            <li>Bank reconciliation and day-to-day banking operations</li>
+            <li>Payment preparation, approval routing and cheque processing</li>
+            <li>Maintained advance recovery reports using Excel (VLOOKUP, INDEX-MATCH, pivot tables)</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-period">May 2018 — Aug 2018<span class="duration">4 months</span></div>
+      <div>
+        <div class="job-title">Audit Assistant</div>
+        <div class="job-org">Thakker and Sanghani · <span class="place">R.S. Puram, Coimbatore</span> — Chartered Accountants</div>
+        <details class="job-detail">
+          <summary>View responsibilities</summary>
+          <ul class="job-tasks">
+            <li>Assisted with external company audits — purchase, sales and cash book vouching</li>
+            <li>Assisted in concurrent bank audits</li>
+            <li>Verified ITR status of banking loan customers</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-period">Nov 2016 — Jan 2018<span class="duration">15 months</span></div>
+      <div>
+        <div class="job-title">Lead Process Associate</div>
+        <div class="job-org">Tandem Accounting Services Pvt. Ltd. · <span class="place">Chennai, Tamil Nadu</span> — Chartered Accountancy Firm</div>
+        <details class="job-detail">
+          <summary>View responsibilities</summary>
+          <ul class="job-tasks">
+            <li>Expense voucher entries in Oracle 12.1.3; prepayment and advance vouchers</li>
+            <li>Daily cash receipt and payment entries in cash book</li>
+            <li>Debit and credit memo processing in accounts payable</li>
+            <li>Three-way matching of purchase invoices with DC and SRV</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-period">May 2010 — Jun 2016<span class="duration">74 months</span></div>
+      <div>
+        <div class="job-title">Founder</div>
+        <div class="job-org">Matriex Shelters · <span class="place">Coimbatore, Tamil Nadu</span> — Building Construction</div>
+        <details class="job-detail">
+          <summary>View responsibilities</summary>
+          <ul class="job-tasks">
+            <li>Ran a small-scale building construction business</li>
+            <li>Managed material sourcing and labour for construction projects</li>
+            <li>Maintained customer relationships throughout project delivery</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+
+    <div class="job">
+      <div class="job-period">Oct 2006 — Apr 2010<span class="duration">43 months</span></div>
+      <div>
+        <div class="job-title">Financial Associate</div>
+        <div class="job-org">EYGBS (India) Pvt. Ltd. · <span class="place">Bengaluru, Karnataka</span> — Shared Services, Ernst &amp; Young LLP</div>
+        <details class="job-detail">
+          <summary>View responsibilities</summary>
+          <ul class="job-tasks">
+            <li>Managed revenue generation via portfolio management in PeopleSoft 9.1</li>
+            <li>Coordinated client engagement portfolios and T&amp;E reporting for partners and managers</li>
+            <li>Assisted in budget-to-actual reporting and variance analysis</li>
+            <li>Handled major engagement clients including Bank of America, GE, Goodrich and Motorola</li>
+            <li>Ran weekly, monthly and quarterly financial and WIP reports</li>
+            <li>Assisted in month-end closing</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION & SKILLS -->
+  <section id="education">
+    <div class="section-head">
+      <span class="section-num">II.</span>
+      <h2>Education &amp; Expertise</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <div class="edu-item">
+          <div class="edu-degree">MBA</div>
+          <div class="edu-meta">VIT University, Vellore · <span class="gold">First Class</span>, 2006</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">B.Com (E-Commerce)</div>
+          <div class="edu-meta">PSG College of Arts &amp; Science, Coimbatore · 66%, 2004</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Higher Secondary</div>
+          <div class="edu-meta">GRG MAT. HSS., Coimbatore · 77.4%, 2001</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-degree">Matriculation</div>
+          <div class="edu-meta">GRG MAT. HSS., Coimbatore · 72.4%, 1999</div>
+        </div>
+      </div>
+      <div>
+        <div class="edu-degree" style="margin-bottom:14px;">Computer &amp; Tools</div>
+        <div class="taglist">
+          <span class="tag">Tally Prime</span>
+          <span class="tag">Tally ERP 9</span>
+          <span class="tag">HFM 11.1.2</span>
+          <span class="tag">MS Office</span>
+          <span class="tag">Tableau+</span>
+          <span class="tag">Oracle 12.1.3</span>
+          <span class="tag">PeopleSoft 9.1</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS & AREAS OF INTEREST -->
+  <section id="certifications">
+    <div class="section-head">
+      <span class="section-num">III.</span>
+      <h2>Certifications &amp; Focus Areas</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="grid-2">
+      <div>
+        <ul class="cert-list">
+          <li><strong>GST Technician</strong> — <span class="from">Institute of Company Accountants, Chennai</span>, June 2023</li>
+          <li><strong>First Accountant, GST &amp; TDS Filing</strong> — <span class="from">Accopedia School of Accounting and Finance, Coimbatore</span>, May 2018</li>
+          <li><strong>Accounting &amp; Tally ERP 9</strong> — <span class="from">Auditor's Association of South India, Coimbatore</span>, August 2016</li>
+        </ul>
+      </div>
+      <div>
+        <ul class="interest-list">
+          <li>GST Filing</li>
+          <li>TDS &amp; TCS Filing</li>
+          <li>ESI &amp; PF Filing</li>
+          <li>AI &amp; Data Visualization Tools</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACHIEVEMENTS -->
+  <section id="achievements">
+    <div class="section-head">
+      <span class="section-num">IV.</span>
+      <h2>Achievements</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="accolades">
+      <div class="accolade">
+        <div class="year">2022</div>
+        <p>Received the Blue Audit distinction at Leggett &amp; Platt for audit performance.</p>
+      </div>
+      <div class="accolade">
+        <div class="year">2019</div>
+        <p>Named July Month Star Performer for demonstrating exemplary performance.</p>
+      </div>
+      <div class="accolade">
+        <div class="year">2010</div>
+        <p>Completed three years of service at a Global Shared Services operation.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="flourish" style="justify-content:center; margin-bottom: 8px;">
+      <span class="line"></span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z"/></svg>
+      <span class="line reverse"></span>
+    </div>
+    <div class="name-echo">Anbu Deepan Chakravarthy V</div>
+    <p>Coimbatore, Tamil Nadu, India · adc2020acs@gmail.com</p>
+  </footer>
+</div>
+
+</body>
+</html>
